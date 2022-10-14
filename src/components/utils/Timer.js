@@ -6,4 +6,6 @@ export function onInterval(callback, miliseconds) {
   onDestroy(() => {
     clearInterval(interval);
   })
+
+  return interval;
 }
