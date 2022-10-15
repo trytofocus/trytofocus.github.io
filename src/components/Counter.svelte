@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { Button } from 'sveltestrap';
 
   const dispatch = createEventDispatcher();
 
@@ -15,9 +16,9 @@
   const fireEvent = () => dispatch("update")
 </script>
 
-<button on:click={increment} on:click|once={fireEvent} type="button">
+<Button on:click={increment} on:click|once={fireEvent} type="button" color="dark">
   {#if !message}
     count is {count} 
   {/if}
   <div>{message}</div>
-</button>
+</Button>

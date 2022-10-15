@@ -1,4 +1,6 @@
 <script>
+    import { Icon } from "sveltestrap";
+
   export let checkMarks = [];
 
   const deleteItem = (value) => {
@@ -9,7 +11,12 @@
 <ul>
   {#each checkMarks as {status = false, text} (text)}
     <li on:click={() => deleteItem(text)}>
-      <span class="checkbox">{status ? "Done" : "To do"}</span> - {text}
+      {#if status}
+        <Icon name="check2-all"/>
+      {:else}
+        "To do"
+      {/if}
+      - {text}
     </li>
   {/each}
 </ul>
@@ -21,7 +28,4 @@
     margin: 0;
   }
 
-  .checkbox {
-    color: green;
-  }
 </style>
