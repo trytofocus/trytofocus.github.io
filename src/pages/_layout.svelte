@@ -1,29 +1,16 @@
 <!-- routify:options preload="proximity" -->
 
 <script>
-  import Menu from "../lib/menus/Menu.svelte";
-  import Topbar from "../lib/topbars/Topbar.svelte";
+  import { Col, Container, Row } from 'sveltestrap';
+  import NavBar from '../components/navs/NavBar.svelte'
+  import Menu from '../components/navs/Menu.svelte';
 </script>
 
-<header><Topbar slot="header"/></header>
-<div class="content">
-  <aside><Menu/></aside>
-  <main><slot /></main>
-</div>
-
-<style>
-  aside {
-    padding-top: 4rem;
-    min-height: 60vh;
-    min-width: 15vw;
-  }
-
-  main {
-    padding: 4rem 2rem 2rem 4rem;
-    width: 100%;
-  }
-
-  .content {
-    display: flex;
-  }
-</style>
+<NavBar/>
+<Container fluid class="px-4">
+  <Row class="gx-5">
+    <Col md="3"><Menu/></Col>
+    <Col><slot></slot></Col>
+    <Col md="3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, eius. Ratione repudiandae mollitia nobis, porro voluptates perspiciatis alias necessitatibus, earum natus ex voluptate! Enim, architecto unde. Facilis iste accusantium id.</Col>
+  </Row>
+</Container>

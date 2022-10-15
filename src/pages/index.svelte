@@ -1,22 +1,24 @@
 <script>
-  import Welcome from '../lib/Welcome.svelte' 
-  import Counter from '../lib/Counter.svelte'
-  import Image from '../lib/Image.svelte'
-  import Checkmarks from '../lib/Checkmarks.svelte';
-  import Deezer from '../lib/Deezer.svelte';
-  import Form from '../lib/Form.svelte';
+  import Welcome from '../components/Welcome.svelte' 
+  import Counter from '../components/Counter.svelte'
+  import Image from '../components/Image.svelte'
+  import Checkmarks from '../components/Checkmarks.svelte';
+  import Deezer from '../components/Deezer.svelte';
+  import Form from '../components/Form.svelte';
   import { afterUpdate, beforeUpdate, onDestroy, onMount } from 'svelte';
-  import { onInterval } from '../lib/utils/Timer';
-  import { modalState, nightMode } from '../lib/stores/UiStore';
-  import { Configurations } from '../lib/stores/Configurations';
-  import { thisObject } from '../lib/stores/CustomStore';
-  import ModalButton from '../lib/ModalButton.svelte';
+  import { onInterval } from '../components/utils/Timer';
+  import { modalState, nightMode } from '../components/stores/UiStore';
+  import { Configurations } from '../components/stores/Configurations';
+  import { thisObject } from '../components/stores/CustomStore';
+  import ModalButton from '../components/ModalButton.svelte';
   import _array from 'lodash-es/array';
 
   onMount(() => {
+    console.log("component mounted")
   })
 
   onDestroy(() => {
+    console.log("component destroyed")
     unsubscribe()
   })
 
@@ -29,7 +31,7 @@
   // await tick()
 
   const imageProps = {
-    image: "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    image: "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixcomponents=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
     width: 400
   }
 
@@ -54,6 +56,7 @@
   })
 
   thisObject.add({id: 1, data: 'random'})
+  
 </script>
 
 <div>{currentTime}</div>
