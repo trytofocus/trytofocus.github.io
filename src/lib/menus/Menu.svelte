@@ -30,17 +30,16 @@
 <style>
   ul {
     list-style-type: none;
-    border-right: 1px solid gray;
     margin: 0;
     padding: 0;
     text-align: left;
-    background-color: rgb(49, 49, 49);
+    background-color: darkslategray;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.87);
   }
 
   li {
     padding: 16px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.87);
   }
 
   a {
