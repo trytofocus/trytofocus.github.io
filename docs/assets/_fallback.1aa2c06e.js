@@ -1,0 +1,3 @@
+import{S as m,i as b,s as h,e as i,a as g,t as v,b as f,c as x,d as s,n as _,f as k,g as $,u as y}from"./index.e8631fb8.js";function C(c){let e,t,n,a,u,l,d,o;return{c(){e=i("div"),t=i("div"),t.textContent="404",n=g(),a=i("div"),u=v(`Page not found. \r
+    \r
+    `),l=i("a"),d=v("Go back"),f(t,"class","huge svelte-1cmpm2f"),f(l,"href",o=c[0]("../")),f(e,"class","e404 svelte-1cmpm2f")},m(r,p){x(r,e,p),s(e,t),s(e,n),s(e,a),s(a,u),s(a,l),s(l,d)},p(r,[p]){p&1&&o!==(o=r[0]("../"))&&f(l,"href",o)},i:_,o:_,d(r){r&&k(e)}}}function S(c,e,t){let n;return $(c,y,a=>t(0,n=a)),[n]}class F extends m{constructor(e){super(),b(this,e,S,C,h,{})}}export{F as default};
