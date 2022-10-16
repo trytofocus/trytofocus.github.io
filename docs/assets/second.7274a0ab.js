@@ -1,0 +1,1 @@
+import{S as o,i as c,s as r,e as i,c as l,n,f}from"./index.eab87bab.js";function u(s){let e;return{c(){e=i("h1"),e.textContent="Second"},m(t,a){l(t,e,a)},p:n,i:n,o:n,d(t){t&&f(e)}}}class m extends o{constructor(e){super(),c(this,e,null,u,r,{})}}export{m as default};
