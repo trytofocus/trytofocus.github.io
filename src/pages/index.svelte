@@ -11,7 +11,6 @@
   import { Configurations } from '../components/stores/Configurations';
   import { thisObject } from '../components/stores/CustomStore';
   import ModalButton from '../components/ModalButton.svelte';
-  import _array from 'lodash-es/array';
 
   onMount(() => {
     console.log("component mounted")
@@ -77,4 +76,4 @@
 <Form/>
 <ModalButton/>
 <div>Modal state: {modal}</div>
-<div>{_array.first($thisObject)?.data}</div>
+<div>{$thisObject[0]?.data}</div>
