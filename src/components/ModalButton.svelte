@@ -1,5 +1,5 @@
 <script>
-  import { modalState } from './stores/UiStore'
+  import { modalState } from '../stores/UiStore'
 
   let open = false;
 

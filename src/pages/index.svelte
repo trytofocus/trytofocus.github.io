@@ -7,9 +7,9 @@
   import Form from '../components/Form.svelte';
   import { afterUpdate, beforeUpdate, onDestroy, onMount } from 'svelte';
   import { onInterval } from '../components/utils/Timer';
-  import { modalState, nightMode } from '../components/stores/UiStore';
-  import { Configurations } from '../components/stores/Configurations';
-  import { thisObject } from '../components/stores/CustomStore';
+  import { modalState, nightMode } from '../stores/UiStore';
+  import { Configurations } from '../stores/Configurations';
+  import { thisObject } from '../stores/CustomStore';
   import ModalButton from '../components/ModalButton.svelte';
 
   onMount(() => {
