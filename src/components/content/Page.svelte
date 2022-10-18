@@ -1,7 +1,12 @@
 <script>
+  import { fly, fade, blur, slide, scale } from 'svelte/transition'
+  import { elasticIn } from 'svelte/easing'
+
   export let title = undefined
   export let content = undefined
 </script>
 
-<h1>{title}</h1>
-<div>{content || "Loading..."}</div>
+{#key content}
+  <h1 in:fly="{{y: -10, duration: 100, delay: 100}}">{title}</h1>
+  <div in:fly="{{y: -10, duration: 100, delay: 100}}">{content}</div>
+{/key}

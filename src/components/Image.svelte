@@ -1,6 +1,6 @@
 <script>
   export let image;
-  export let width = 400;
+  export let height = 400;
 </script>
 
-<img width={width} src={image}>
+<img {height} src={image}>
